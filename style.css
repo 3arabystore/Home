@@ -1,0 +1,115 @@
+
+
+.nav{
+  width: 100%;
+    position: fixed;
+}
+
+
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+.navbar {
+  display: flex;
+  width: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00000000;
+  gap: 20px;
+  padding-bottom: 40px;
+  transition: .3s;
+
+
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 22px 20px;
+  text-decoration: none;
+  font-size: x-large;
+  padding-top: 40px;
+}
+
+
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc800;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar li a:hover::after {
+  transform: scaleX(1); 
+}
+
+
+
+
+/* .book {
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.book:hover {
+  background: #c4e201;
+}
+
+.book svg {
+  width: 34px;
+  height: 20px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.book:hover svg {
+  transform: translateX(5px);
+}
+
+.book:active {
+  transform: scale(0.95);
+} */
+.navbar:hover{
+  background-color: white;
+
+    
+}
+
+.navbar:hover > li > a{
+  color: black;
+}
+
+
+.nav_bg{
+    height: 1000px;
+    width: 100% ;
+    background-image: url(arabi_black.jpeg);
+    background-size: contain;
+    background-repeat:no-repeat;
+}
