@@ -1,0 +1,837 @@
+body{
+    background-color: black;
+}
+.nav{
+  width: 100%;
+    position: fixed;
+}
+
+
+body{
+  position: relative;
+    margin: 0px;
+    background-color: black;
+    display: grid;
+    height: 150%;
+    z-index: -2;
+}
+@media screen and (max-width: 450px) {
+  body{
+      position: relative;
+      margin: 0px;
+      background-color: black;
+      display: grid;
+      height: 1500px;
+      z-index: -2;
+}
+}
+
+
+.navbar {
+  display: flex;
+  width: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00000000;
+  gap: 20px;
+  padding-bottom: 40px;
+  transition: .3s;
+
+
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 22px 20px;
+  text-decoration: none;
+  font-size: x-large;
+  padding-top: 40px;
+}
+
+
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc800;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar li a:hover::after {
+  transform: scaleX(1); 
+}
+.navbar:hover{
+  background-color: white;
+
+    
+}
+
+.navbar:hover > li > a{
+  color: black;
+}
+
+
+.firstform{
+    display: flex;
+    position: relative;
+    top: 250px;
+    width: 33%;
+    justify-self: end;
+    flex-direction: column;
+    margin: 50px;
+    gap: 20px;
+}
+@media screen and (max-width: 450px) {
+  .firstform{
+    display: flex;
+    position: relative;
+    top: 150%;
+    width: 80%;
+    justify-self: end;
+    flex-direction: column;
+    margin: 50px;
+    gap: 20px;
+}
+}
+
+.firstform *{
+    margin: 0;
+}
+p{
+    color: white;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+/* instagram button */
+.Btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+}
+
+/* end of instagram button */
+
+
+/* size selector */
+:focus {
+  outline: 0;
+  border-color: #2260ff;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: start;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #dee7ff;
+  z-index: 1;
+  color: #0043ed;
+}
+
+label span {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.375em .75em;
+  position: relative;
+  margin-left: .0625em;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #3e4963;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+label:first-child span {
+  border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+  border-radius: 0 .375em .375em 0;
+}
+
+/* end of selector */
+/* quantity selector */
+
+
+
+
+.qty-input {
+	color: black;
+	background: white;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+  width: 25%;
+
+	.product-qty,
+	.qty-count {
+		background: transparent;
+		color: inherit;
+		font-weight: bold;
+		font-size: inherit;
+		border: none;
+		display: inline-block;
+		min-width: 0;
+		height: 2.5rem;
+		line-height: 1;
+		
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.product-qty {
+		width: 50px;
+		min-width: 0;
+		display: inline-block;
+		text-align: center;
+		appearance: textfield;		
+		
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			appearance: none;
+			margin: 0;
+		}
+	}
+
+	.qty-count {
+		padding: 0;
+		cursor: pointer;
+		width: 2.5rem;
+		font-size: 1.25em;
+		text-indent: -100px;
+		overflow: hidden;
+		position: relative;
+		
+		&:before, 
+		&:after {
+			content: "";
+			height: 2px;
+			width: 10px;
+			position: absolute;
+			display: block;
+			background: black;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		&--minus {
+			border-right: 1px solid #e2e2e2;
+		}
+		&--add {
+			border-left: 1px solid #e2e2e2;
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+		
+		&:disabled {
+			color: gray;
+			background: #f2f2f2;
+			cursor: not-allowed;
+			border-color: transparent;
+			
+			&:before,
+			&:after {
+				background: gray;
+			}
+		}
+	}
+}
+
+/* end of quantity selector */
+
+/* buy now button */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+/* end of button */
+
+#image{
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+  top: -50%;
+  height: 600px;
+  position: relative;
+  left: 50px;
+  justify-self: start;
+  width: 52%;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+#right_scroll{
+  width: 5%;
+  height: 10%;
+  cursor: pointer;
+  background-color: #00000000;
+  color: gold;
+  border: 0px;
+
+
+
+}
+
+
+#left_scroll{
+  width: 5%;
+  height: 10%;
+  cursor: pointer;
+  background-color: #00000000;
+  color: gold;
+  border: 0px;
+
+
+
+}
+
+/* image , rightscroll , leftscroll */
+@media screen and (max-width: 480px) {
+  #image{
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+  top: -50%;
+  height: 600px;
+  position: relative;
+  left: 50px;
+  justify-self: start;
+  width: 70%;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-between;
+}
+#right_scroll{
+  width: 20%;
+  height: 10%;
+  cursor: pointer;
+  background-color: #00000000;
+  color: gold;
+  border: 0px;
+
+
+
+
+}
+
+
+#left_scroll{
+  width: 20%;
+  height: 10%;
+  cursor: pointer;
+  background-color: #00000000;
+  color: gold;
+  border: 0px;
+
+
+
+
+}
+}
+
+
+
+/* generic mobile */
+
+@media screen and (max-width: 480px) {
+  body{
+    background-color: black;
+}
+.nav{
+  width: 100%;
+    position: fixed;
+}
+  .navbar {
+  display: flex;
+  width: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #00000000;
+  gap: 20px;
+  padding-bottom: 40px;
+  transition: .3s;
+
+
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 22px 20px;
+  text-decoration: none;
+  font-size: x-large;
+  padding-top: 40px;
+}
+
+
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffc800;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar li a:hover::after {
+  transform: scaleX(1); 
+}
+.navbar:hover{
+  background-color: white;
+
+    
+}
+
+.navbar:hover > li > a{
+  color: black;
+}
+  .firstform *{
+    margin: 0;
+}
+p{
+    color: white;
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+/* instagram button */
+.Btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+}
+
+/* end of instagram button */
+
+
+/* size selector */
+:focus {
+  outline: 0;
+  border-color: #2260ff;
+  box-shadow: 0 0 0 4px #b5c9fc;
+}
+
+.mydict div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: start;
+}
+
+.mydict input[type="radio"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.mydict input[type="radio"]:checked + span {
+  box-shadow: 0 0 0 0.0625em #0043ed;
+  background-color: #dee7ff;
+  z-index: 1;
+  color: #0043ed;
+}
+
+label span {
+  display: block;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.375em .75em;
+  position: relative;
+  margin-left: .0625em;
+  box-shadow: 0 0 0 0.0625em #b5bfd9;
+  letter-spacing: .05em;
+  color: #3e4963;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+label:first-child span {
+  border-radius: .375em 0 0 .375em;
+}
+
+label:last-child span {
+  border-radius: 0 .375em .375em 0;
+}
+
+/* end of selector */
+/* quantity selector */
+
+
+
+
+.qty-input {
+	color: black;
+	background: white;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+  width: 25%;
+
+	.product-qty,
+	.qty-count {
+		background: transparent;
+		color: inherit;
+		font-weight: bold;
+		font-size: inherit;
+		border: none;
+		display: inline-block;
+		min-width: 0;
+		height: 2.5rem;
+		line-height: 1;
+		
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.product-qty {
+		width: 50px;
+		min-width: 0;
+		display: inline-block;
+		text-align: center;
+		appearance: textfield;		
+		
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			appearance: none;
+			margin: 0;
+		}
+	}
+
+	.qty-count {
+		padding: 0;
+		cursor: pointer;
+		width: 2.5rem;
+		font-size: 1.25em;
+		text-indent: -100px;
+		overflow: hidden;
+		position: relative;
+		
+		&:before, 
+		&:after {
+			content: "";
+			height: 2px;
+			width: 10px;
+			position: absolute;
+			display: block;
+			background: black;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		&--minus {
+			border-right: 1px solid #e2e2e2;
+		}
+		&--add {
+			border-left: 1px solid #e2e2e2;
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+		
+		&:disabled {
+			color: gray;
+			background: #f2f2f2;
+			cursor: not-allowed;
+			border-color: transparent;
+			
+			&:before,
+			&:after {
+				background: gray;
+			}
+		}
+	}
+}
+
+/* end of quantity selector */
+
+/* buy now button */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: black;
+  z-index: 1;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+}
+
+
+
