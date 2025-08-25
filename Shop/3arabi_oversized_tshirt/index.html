@@ -142,7 +142,12 @@
         })();
 
 
-        
+        function submit_order(){
+            var form = getElementById("orderform")
+
+
+            html2pdf().from(form).save();
+        }
 
         </script>
         <script src="script.js"></script>
