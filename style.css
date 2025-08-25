@@ -113,3 +113,19 @@ body{
     background-size: contain;
     background-repeat:no-repeat;
 }
+
+
+@media screen and (max-width: 450px) {
+
+
+
+  .nav_bg{
+    position: relative;
+    height: 1000px;
+    top: 30px;
+    width: 100% ;
+    background-image: url(arabi_black.jpeg);
+    background-size: contain;
+    background-repeat:no-repeat;
+  }
+}
