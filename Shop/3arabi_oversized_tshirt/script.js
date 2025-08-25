@@ -18,3 +18,10 @@ function next(){
     
     
 }
+
+function submit_order(){
+            var form = getElementById("orderform")
+
+
+            html2pdf().from(form).save();
+        }
