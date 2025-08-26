@@ -11,6 +11,10 @@ body{
     background-color: black;
 }
 
+body *{
+  font-family: "Ubunto Mono" , monospace;
+}
+
 .navbar {
   display: flex;
   width: auto;
