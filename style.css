@@ -11,7 +11,7 @@ body{
     background-color: black;
 }
 
-body *{
+*{
   font-family: "Ubunto Mono" , monospace;
 }
 
@@ -126,7 +126,7 @@ body *{
   .nav_bg{
     position: relative;
     height: 1000px;
-    top: 30px;
+    top: 70px;
     width: 100% ;
     background-image: url(arabi_black.jpeg);
     background-size: contain;

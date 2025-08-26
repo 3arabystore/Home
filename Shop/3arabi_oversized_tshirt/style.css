@@ -16,7 +16,7 @@ body{
     z-index: -2;
 }
 
-body *{
+*{
   font-family: "Ubunto Mono" , monospace;
 }
 @media screen and (max-width: 450px) {
@@ -345,6 +345,7 @@ label:last-child span {
   cursor: pointer;
   color: black;
   z-index: 1;
+  width: 300px;
 }
 
 .button:before {
@@ -399,7 +400,7 @@ label:last-child span {
   display: flex;
   flex-direction: row;
   z-index: -1;
-  top: -50%;
+  top: -20%;
   height: 600px;
   position: relative;
   left: 50px;
